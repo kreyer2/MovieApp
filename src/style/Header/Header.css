@@ -1,0 +1,88 @@
+.header-wrapper {
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.header-wrapper .logo {
+  font-family: adobe-gothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+}
+.header-wrapper .logo-icon {
+  padding-bottom: 5px;
+}
+.header-wrapper .logo a {
+  color: #3F444E;
+  text-decoration: none;
+}
+.header-wrapper .nav-list li {
+  width: 60px;
+  text-align: center;
+}
+.header-wrapper .nav-list a {
+  color: #9B9EA3;
+}
+.header-wrapper .nav-list a:hover {
+  color: #575C67;
+}
+.header-wrapper .nav-list a:hover + .nav-link-hover-element {
+  visibility: visible;
+}
+.header-wrapper .nav-list .nav-link-hover-element {
+  visibility: hidden;
+  margin-top: 10px;
+  cursor: default;
+  font-size: 14px;
+  position: absolute;
+  width: 60px;
+  color: white;
+  background: #D8232A;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header-wrapper .nav-list .nav-link-hover-element:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-bottom-color: #D8232A;
+  border-top: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+.header-wrapper .user {
+  font-size: 15px;
+}
+.header-wrapper .user .user-image {
+  width: 30px;
+  height: 30px;
+}
+.header-wrapper .user .user-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.header-wrapper .user a {
+  color: #9B9EA3;
+  margin-left: 10px !important;
+  text-decoration: none;
+}
+.header-wrapper .user a i {
+  font-size: 13px;
+}
+.header-wrapper .user a:hover {
+  color: #575C67;
+}
+.header-wrapper .user .username a {
+  color: #3F444E;
+}
+
+/*# sourceMappingURL=Header.css.map */

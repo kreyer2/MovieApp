@@ -1,0 +1,138 @@
+@import "./Header/Header.css";
+body {
+  font-family: Calibri, sans-serif;
+  color: #3F444E;
+  font-weight: bold;
+}
+
+.container-fluid {
+  width: auto;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.main-content-header {
+  text-transform: uppercase;
+  color: #3F444E;
+}
+
+.movie-list {
+  margin-bottom: 20px !important;
+}
+
+.movie-overview-wrapper {
+  font-weight: 400;
+}
+.movie-overview-wrapper .thesis {
+  font-weight: bold;
+}
+.movie-overview-wrapper .poster-image {
+  width: 300px;
+}
+.movie-overview-wrapper .poster-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.movie-overview-wrapper .production-companies .logo {
+  max-width: 80px;
+}
+.movie-overview-wrapper .production-companies .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.similar-wrapper h3 {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.similar-wrapper a {
+  color: #575C67;
+}
+
+.similar-item-wrapper {
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.similar-item-wrapper .similar-name {
+  display: flex;
+}
+.similar-item-wrapper .poster-image {
+  width: 100px;
+}
+.similar-item-wrapper .poster-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.movie-wrapper {
+  width: 140px;
+  height: 100%;
+  margin-top: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.movie-wrapper:hover {
+  text-decoration: none;
+}
+.movie-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-filter: grayscale(0%) blur(0px);
+  filter: grayscale(0%) blur(0px);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.movie-wrapper img:hover {
+  -webkit-filter: grayscale(100%) blur(3px);
+  filter: grayscale(100%) blur(3px);
+  content: "Info";
+}
+.movie-wrapper .movie-name {
+  text-align: center;
+  color: #3F444E;
+  font-size: 16px;
+  font-weight: bold;
+}
+.movie-wrapper .movie-name:hover {
+  color: rgba(63, 68, 78, 0.71);
+}
+.movie-wrapper .year-genre {
+  font-size: 12px;
+  color: #9B9EA3;
+}
+
+.paginator-link {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.paginator-previous, .paginator-next {
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination {
+  margin-bottom: 20px !important;
+}
+
+#react-paginate ul {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#react-paginate li {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
