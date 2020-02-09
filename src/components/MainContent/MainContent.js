@@ -1,21 +1,50 @@
-import React, { Component } from 'react';
-import MovieList from "./Movies/MovieList";
-import MovieOverview from "../MovieOverview/MovieOverview";
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
+import React, { useEffect } from 'react';
+import Movie from "./Movies/Movie";
+import { connect } from "react-redux";
+import {getMovies} from "../../actions/movies_action";
+import lodash from 'lodash';
+import Paginator from "../Paginator/Paginator";
+import Loader from "../Loader";
 
-export default class MainContent extends Component {
-  render() {
+
+function MainContent ({getMovies, movies, isLoaded, match}) {
+
+  useEffect(() => {
+    getMovies(`${match.url.length > 1 ? match.params.number : 1}`);
+  }, []);
+
+
+  if(isLoaded) {
     return (
-      <div className="container-fluid">
-        <Switch>
-          <Route exact path="/" component={MovieList}/>
-          <Route path="/about/:movieId" component={MovieOverview}/>
-          <Route path="/:number" component={MovieList}/>
-        </Switch>
-      </div>
+      <main className="main-wrapper container-fluid" id="main">
+        <div className="list__grid">
+          {lodash.map(movies.movieList, (item, key) => {
+            return (
+              <div className="grid-elem__wrapper" key={key}>
+                <Movie {...item}/>
+              </div>
+            )
+          })}
+        </div>
+        <Paginator page={movies.page}/>
+      </main>
     );
   }
+
+  return <Loader/>
 }
+
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies,
+    isLoaded: state.movies.isLoaded
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getMovies: url => dispatch(getMovies(url))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainContent)

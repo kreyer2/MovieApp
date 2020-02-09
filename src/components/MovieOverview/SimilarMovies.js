@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import lodash from 'lodash';
 import Movie from "./Movie";
 
-export default class SimilarMovies extends Component {
-  render() {
-    const { movies } = this.props;
-
+export default function SimilarMovies ({movies}){
     return (
-      <div className="similar-wrapper">
+      <div className="similar-wrapper container-fluid">
         <h3>Similar movies</h3>
         {
           movies.results ?
@@ -23,5 +20,4 @@ export default class SimilarMovies extends Component {
         }
       </div>
     );
-  }
 }

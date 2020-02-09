@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import {getMovieById} from "../../../actions/movies_action";
 
-class Movie extends Component {
-  render() {
-    const { poster_path, title, id } = this.props;
-
+function Movie ({poster_path, title, id}) {
     return (
-      <Link to={`/about/${id}`} className="movie-wrapper" >
+      <a href={`/about/${id}`} className="movie-wrapper" >
         <img className="movie-image"
              src={`https://image.tmdb.org/t/p/original${poster_path}`}
              alt={title}/>
         <div className="movie-name">
           {title}
         </div>
-      </Link>
+      </a>
     );
-  }
 }
 
 const mapStateToProps = (state) => {

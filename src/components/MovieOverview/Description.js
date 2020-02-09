@@ -3,7 +3,7 @@ import lodash from 'lodash';
 
 export default function MovieDescription ({movie}) {
     return (
-      <div className="movie-overview-wrapper row">
+      <div className="movie-overview-wrapper container-fluid row">
         <div className="poster-image col-md-3">
           <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                alt={movie.title}/>

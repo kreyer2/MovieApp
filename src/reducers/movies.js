@@ -1,9 +1,11 @@
 const initialState = {
-  isLoading: false,
+  isLoaded: false,
   isError: false,
   movieById: {},
   movies: [],
-  similarMovies: []
+  similarMovies: {
+    results: []
+  }
 };
 
 export const movieReducer = (state = initialState, action) => {
@@ -29,7 +31,7 @@ export const movieReducer = (state = initialState, action) => {
     case "IS_LOADING":
       return {
         ...state,
-        isLoading: action.bool
+        isLoaded: action.bool
       };
     case "IS_ERROR":
       return {

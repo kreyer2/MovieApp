@@ -2,12 +2,13 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kreyer2.github.io/MovieApp/",
+  "homepage": "https://movieapp-4b1db.firebaseapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.0",
+    "firebase": "^7.8.1",
     "lodash": "^4.17.15",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -40,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "redux-logger": "^3.0.6"
   }
 }

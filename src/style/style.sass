@@ -4,6 +4,20 @@
 @import "./MainContent/Movie"
 @import "./MainContent/Paginator"
 
+.App
+  display: grid
+  grid-template-areas: "header" "main"
+  grid-template-rows: 10% 1fr
+  height: 100vh
+
+
+#header
+  grid-area: header
+
+#main
+  grid-area: main
+
+
 #react-paginate ul
   display: inline-block
   padding-left: 15px

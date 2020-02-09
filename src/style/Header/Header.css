@@ -1,8 +1,16 @@
 .header-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px solid #9a9a9a;
+}
+.header-wrapper div {
   padding: 0;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-wrapper .logo {
   font-family: adobe-gothic-std, sans-serif;
@@ -43,6 +51,7 @@
   border-radius: 0.2em;
   text-transform: uppercase;
   text-align: center;
+  z-index: 10;
 }
 .header-wrapper .nav-list .nav-link-hover-element:after {
   content: "";
